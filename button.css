@@ -1,0 +1,61 @@
+.lisa{
+        -fx-background-color:#00BFFF;
+        -fx-background-radius: 5,5,4;
+        -fx-background-insets: 0 0 -1 0,0,1;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+        -fx-text-alignment: center;
+}
+.lisa:hover{
+
+        -fx-background-color:#87CEFA;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+        -fx-text-alignment: center;
+}
+.list{
+
+        -fx-background-color:#F0F8FF;
+        -fx-text-alignment: center;
+}
+.list:hover{
+
+        -fx-background-color:cdcbcb;
+        -fx-text-alignment: center;
+}
+.kiri{
+        -fx-font: 50px Arial;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );;
+        -fx-text-alignment: right;
+        -fx-text-style: bold;
+        -fx-text-fill: white;
+        -fx-stroke: black;
+        -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+}
+#my-table .table-cell {
+
+        -fx-alignment: CENTER;
+        -fx-padding: 0.166667em; /* 2px, plus border adds 1px */
+        -fx-background-color: transparent;
+        -fx-border-color: #F0F8FF;
+        -fx-border-width: 0.083333em; /* 1 */
+        -fx-cell-size: 2.0em; /* 24 */
+        -fx-text-fill: purple;
+}
+#my-table .table-cell:hover{
+        -fx-background-color:cdcbcb;
+        -fx-text-alignment: center;
+}
+.borderPane{
+    -fx-background-image: url("img/startscreen2.jpg");
+    -fx-background-size: 820 820;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+.pane{
+    -fx-background-image: url("img/space.jpg");
+    -fx-background-size: 820 820;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+.kera {
+        -fx-effect: dropshadow( one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+}
