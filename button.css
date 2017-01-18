@@ -45,13 +45,13 @@
         -fx-text-alignment: center;
 }
 .borderPane{
-    -fx-background-image: url("img/startscreen2.jpg");
+    -fx-background-image: url("img/ForestSoul.jpg");
     -fx-background-size: 820 820;
     -fx-background-position: center center;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
 .pane{
-    -fx-background-image: url("img/space.jpg");
+    -fx-background-image: url("img/ForestSoul.jpg");
     -fx-background-size: 820 820;
     -fx-background-position: center center;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);

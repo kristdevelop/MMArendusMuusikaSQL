@@ -25,10 +25,10 @@ public class Login {
     Boolean mute;
     SQLiteAndmed baas=new SQLiteAndmed();
     TableView table;
-    String ssound = "src/sound/Sci-Fi-Open_Looping.mp3";
+    String ssound = "src/sound/ForestSound.mp3";
     MediaPlayer mediaPlayer;
-    File f = new File("src/button.css");                                //css faili kasutamiseks selle asukoht
-    String fileURI = f.toURI().toString();                              //URIs are a standard for identifying documents using a short string of numbers, letters, and symbols
+    File f = new File("src/button.css");   //css faili kasutamiseks selle asukoht
+    String fileURI = f.toURI().toString();          //URIs are a standard for identifying documents using a short string of numbers, letters, and symbols
 
     public Login(boolean mutesound){
         mute=mutesound;
@@ -49,7 +49,7 @@ public class Login {
         stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Lisa oma nimi highScore edetabeli jaoks!!!");
+        stage.setTitle("Lisa oma nimi edetabeli jaoks!!!");
         stage.show();
     }
     public void loginBox(){
@@ -110,11 +110,11 @@ public class Login {
         String nimi=nameField.getText();
         if (nimi.length()< 5 || nimi.isEmpty()) {
             login.getChildren().remove(markus);
-            markus = new Label("Nime sisestamine on vajalik ja peab olema vähemalt 5 tähemärki!!!!");
+            markus = new Label("Nime peab olema 5 tähemärki!");
             markus.setTextFill(Color.RED);
             login.getChildren().add(markus);
-
         }
+
         else {
             System.out.println(nimi);
             stage.close();
@@ -123,6 +123,7 @@ public class Login {
             new GameWindow(nimi,mute);
         }
     }
+
     public void vaataBaasi(){
         table = new TableView();
         table.setMaxWidth(400);
@@ -159,9 +160,9 @@ public class Login {
         loginBox();
         scene.setCursor(Cursor.DEFAULT);
         Label teade = new Label("Game Over");
-        Label soundlicence = new Label("Music (and/or Sound Effects) by Eric Matyas\n" +
-                "www.soundimage.org");
-        Label projektlicence = new Label("Projekt by Marko Mõznikov");
+        Label soundlicence = new Label("Sound Effect by Youtube source:\n" +
+                "https://www.youtube.com/watch?v=4NRaQ8OC780");
+        Label projektlicence = new Label("Kylli Rist, see on oppimiseks");
         projektlicence.setTextFill(Color.WHITE);
         soundlicence.setTextFill(Color.WHITE);
         teade.setTextFill(Color.WHITE);
@@ -175,7 +176,7 @@ public class Login {
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             mediaPlayer.play();
         }catch (Exception e){
-            System.out.println("Linuks vist mussi niisama ei toeta");
+
         }
     }
 }

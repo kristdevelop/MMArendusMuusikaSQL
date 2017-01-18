@@ -36,7 +36,7 @@ public class GameWindow {
     ArrayList<Kera> valang= new ArrayList();
     ArrayList<Kera> vastased= new ArrayList();
     ArrayList<Kera> vastased2= new ArrayList();
-    String ssound = "src/sound/Steamtech-Mayhem.mp3";
+    String ssound = "src/sound/ForestSound.mp3";
     MediaPlayer mediaPlayer;
     File file = new File("src/button.css");
     String fileURI = file.toURI().toString();
@@ -283,7 +283,7 @@ public class GameWindow {
         pane.setOnMousePressed(event -> {
             if (event.getButton() == MouseButton.PRIMARY) {                                 //premkliki defineerimine
                 tulistamisealghetk =true;
-                String tsound = "src/sound/Space-Cannon.mp3";
+                String tsound = "src/sound/ForestSound.mp3";
                 player(tsound);
             }
             if (event.getButton() == MouseButton.SECONDARY) {                               //vasakkliki defineerimine
@@ -384,7 +384,7 @@ public class GameWindow {
             stage.setTitle("Shooter - punktisumma on:  " + fullscore);
             kuulid--;
         } else {
-            String psound = "src/sound/Explosion2.mp3";
+            String psound = "src/sound/ForestSound.mp3";
             player(psound);
             valang.remove(j);
             valang.removeIf(Objects::isNull);
@@ -398,7 +398,7 @@ public class GameWindow {
         }
     }
     public void shipCollision(Node vshape){                                     //laeva kokkupõrge vastasega
-        String csound = "src/sound/Hull-Breach.mp3";
+        String csound = "src/sound/ForestSound.mp3";
         player(csound);
         pane.getChildren().removeAll(vshape, ship, kshape);
         stage.close();
@@ -413,7 +413,7 @@ public class GameWindow {
     public  void barjaarCollision(Node vshape, int i,int arrayidentifier){      //barjääri kokkupõrge vastasega
         pane.getChildren().remove(vshape);
         fullscore = scoreCounter(100);
-        stage.setTitle("Shooter - punktisumma on:  " + fullscore);
+        stage.setTitle("Punktisumma on:  " + fullscore);
         removeVastane(i,arrayidentifier);
     }
     public  void  player(String heli){                                          //heli
@@ -424,7 +424,7 @@ public class GameWindow {
                 mediaPlayer.setVolume(0.1);
                 mediaPlayer.play();
             } catch (Exception e) {
-                System.out.println("Mingi jama playeriga");
+                System.out.println("Mingi jama mediaplayeriga");
             }
         }
     }
